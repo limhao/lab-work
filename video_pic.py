@@ -59,6 +59,7 @@ for filepath, dirnames, filenames in os.walk(dir_video_src):
 			# 存图片的地址
 			file_dir_desc = os.path.join(dir_video_des, filename)
 			if not os.path.exists(file_dir_desc):
+
 				os.mkdir(file_dir_desc)
 				print("创建文件夹 ", file_dir_desc)
 			else:

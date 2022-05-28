@@ -21,7 +21,7 @@ for files in os.listdir(pic_root):
 	# 获得文件夹位置
 	now_address = os.path.join(pic_root, files)
 	now_word_address = os.path.join(word_root, files)
-	# os.mkdir(now_word_address)
+	print(now_word_address[:-4])
 	pic_file_name = file_pic_name(now_address)
 	for name in pic_file_name:
 		pic_add = os.path.join(now_address, name)
@@ -56,8 +56,8 @@ for files in os.listdir(pic_root):
 			"log_id": 1526782073422385246
 		}
 		title = files[:-4] + name[:-4]
-		print(title)
-		print(files)
+		# print(title)
+		# print(files)
 		# print(pic_add)
 # now_address = os.path.join(pic_root, '[3.2.6]--单元小结.mp4')
 # pic_file_name = file_pic_name(now_address)
