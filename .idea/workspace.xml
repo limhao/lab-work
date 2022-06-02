@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4f300e0-99a8-4978-854e-1da3cd3a22ba" name="Changes" comment="提交" />
+    <list default="true" id="f4f300e0-99a8-4978-854e-1da3cd3a22ba" name="Changes" comment="提交">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,7 +56,7 @@
       <recent name="C:\Users\warma\Desktop\demo\video" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.file_opt">
+  <component name="RunManager" selected="Python.json_mysql">
     <configuration name="file_opt" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="get_point" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -145,8 +147,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.file_opt" />
         <item itemvalue="Python.json_mysql" />
+        <item itemvalue="Python.file_opt" />
         <item itemvalue="Python.general_basic (1)" />
         <item itemvalue="Python.general_basic" />
       </list>
@@ -187,6 +189,8 @@
       <workItem from="1653453482755" duration="3674000" />
       <workItem from="1653475147896" duration="603000" />
       <workItem from="1653640166638" duration="12686000" />
+      <workItem from="1653747292979" duration="405000" />
+      <workItem from="1653893472862" duration="2129000" />
     </task>
     <task id="LOCAL-00001" summary="提交">
       <created>1652844967222</created>
@@ -258,8 +262,8 @@
     <SUITE FILE_PATH="coverage/main_py$around_pic.coverage" NAME="around_pic Coverage Results" MODIFIED="1652926331364" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/main_py$pic_word__1_.coverage" NAME="pic_word (1) Coverage Results" MODIFIED="1653314336109" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/demo$main.coverage" NAME="main Coverage Results" MODIFIED="1650767055140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/main_py$json_mysql.coverage" NAME="json_mysql Coverage Results" MODIFIED="1653656983555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/main_py$pic_word.coverage" NAME="pic_word Coverage Results" MODIFIED="1653659735558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/main_py$json_mysql.coverage" NAME="json_mysql Coverage Results" MODIFIED="1653894402888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/main_py$make_pic__1_.coverage" NAME="make_pic (1) Coverage Results" MODIFIED="1652771236677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/main_py$get_dir.coverage" NAME="get_dir Coverage Results" MODIFIED="1652755272033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
