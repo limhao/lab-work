@@ -157,13 +157,14 @@ if __name__ == '__main__':
 
 	text = ""
 	topic = ""
-	now_address = os.path.join(pic_root, '[3.2.6]--单元小结.mp4')
+	main = '[10.4.1]--单元开篇.mp4'
+	now_address = os.path.join(pic_root, main)
 	pic_file_name = file_pic_name(now_address)
 	sort_pic_file = sort_string_list(pic_file_name)
 	# print(pic_file_name)
 	# 记得到时候激活
 	# os.mkdir(os.path.join(word_root, '[9.7.1]--练习与作业.mp4'))
-	text_address = os.path.join(word_root, '[3.2.6]--单元小结.mp4')
+	text_address = os.path.join(word_root, main)
 	try:
 		os.mkdir(text_address)
 	except Exception as e:
@@ -203,7 +204,7 @@ if __name__ == '__main__':
 		try:
 			if result_json['words_result_num'] <= 3:
 				num = num + 1
-				print('内容太少 删除')
+				print('初始内容太少 删除')
 				continue
 		except Exception as e:
 			print(e)
@@ -263,6 +264,7 @@ if __name__ == '__main__':
 			print(startTime)
 		# 完成了改变
 		elif topic != result_json['words_result'][0]['words']:
+			new_dict['main'] = main
 			new_dict['topic'] = topic
 			new_dict['content'] = text
 			new_dict['startTime'] = startTime
@@ -280,6 +282,7 @@ if __name__ == '__main__':
 		# 关注尾部
 		# 最后一个是抓住了
 		elif i == (len(pic_file_name) - 1):
+			new_dict['main'] = main
 			new_dict['topic'] = topic
 			new_dict['content'] = text
 			new_dict['startTime'] = startTime
