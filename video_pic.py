@@ -24,6 +24,7 @@ dir_video_src = os.path.join(os.getcwd(), 'video')
 import av
 import os
 import warnings
+import shutil
 
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
@@ -45,7 +46,7 @@ def extract_video(filename):
 		)
 
 
-import shutil
+
 
 list_vid = []
 
@@ -70,8 +71,4 @@ for filepath, dirnames, filenames in os.walk(dir_video_src):
 					# shutil.move(filename_png, file_dir_desc)
 					shutil.copy2(filename_png, file_dir_desc)
 					os.remove(filename_png)
-	# 对于地址进行判断
-	# 对filename 是可以完成筛选的
 
-	# print(file)
-	# print(filepath)

@@ -31,7 +31,9 @@ TOKEN_URL = 'https://aip.baidubce.com/oauth/2.0/token'
     获取token
 """
 # 定义垃圾词
-rubbish_word = ['己utho', 'bnmou', 'pyho如', '知中国大学MOOC', '中国大学MOOC', 'python', '2', 'bdryou', 'pythoni', 'baryoul', 'barpou', 'bdrpou', "python'", '和中国大学MOOC', 'pythom', 'pyhQ心', 'pyho或', 'bAmou', 'pyhQ吸', 'bao则', 'bpo网']
+rubbish_word = ['己utho', 'bnmou', 'pyho如', '知中国大学MOOC', '中国大学MOOC', 'python', '2', 'bdryou', 'pythoni', 'baryoul',
+                'barpou', 'bdrpou', "python'", '和中国大学MOOC', 'pythom', 'pyhQ心', 'pyho或', 'bAmou', 'pyhQ吸', 'bao则',
+                'bpo网']
 
 
 def fetch_token():
@@ -145,8 +147,13 @@ def rubbish_word_fun(result_json, rubbish_word):
 		return result
 
 
+className = "python语言程序设计"
 pic_root = os.path.join(os.getcwd(), 'pic')
 word_root = os.path.join(os.getcwd(), 'text')
+classPicRoot = os.path.join(pic_root, className)
+classWordRoot = os.path.join(word_root, className)
+
+
 if __name__ == '__main__':
 
 	# 获取access token
@@ -157,14 +164,14 @@ if __name__ == '__main__':
 
 	text = ""
 	topic = ""
-	main = '[10.4.1]--单元开篇.mp4'
-	now_address = os.path.join(pic_root, main)
+	main = '[3.2.6]--单元小结.mp4'
+	now_address = os.path.join(classPicRoot, main)
 	pic_file_name = file_pic_name(now_address)
 	sort_pic_file = sort_string_list(pic_file_name)
 	# print(pic_file_name)
 	# 记得到时候激活
 	# os.mkdir(os.path.join(word_root, '[9.7.1]--练习与作业.mp4'))
-	text_address = os.path.join(word_root, main)
+	text_address = os.path.join(classWordRoot, main)
 	try:
 		os.mkdir(text_address)
 	except Exception as e:
@@ -173,7 +180,7 @@ if __name__ == '__main__':
 	# 文件遍历
 	# 记录图片开始的记录
 	num = 0
-	for i in range(len((sort_pic_file))):
+	for i in range(len(sort_pic_file)):
 		# 前后顺序很重要
 		name = str(sort_pic_file[i]) + '.png'
 		print(name)
@@ -264,6 +271,7 @@ if __name__ == '__main__':
 			print(startTime)
 		# 完成了改变
 		elif topic != result_json['words_result'][0]['words']:
+			new_dict['className'] = className
 			new_dict['main'] = main
 			new_dict['topic'] = topic
 			new_dict['content'] = text
@@ -282,6 +290,7 @@ if __name__ == '__main__':
 		# 关注尾部
 		# 最后一个是抓住了
 		elif i == (len(pic_file_name) - 1):
+			new_dict['className'] = className
 			new_dict['main'] = main
 			new_dict['topic'] = topic
 			new_dict['content'] = text
@@ -304,4 +313,3 @@ if __name__ == '__main__':
 		for content in range(1, len(result_json['words_result'])):
 			topic_context.append(result_json['words_result'][content]['words'])
 		print(topic_context)
-
