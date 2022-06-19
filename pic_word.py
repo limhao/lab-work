@@ -15,6 +15,7 @@ from urllib.parse import urlencode
 
 # 防止https证书校验不正确
 import ssl
+import os
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -106,9 +107,6 @@ def file_video_name(file_dir):
 		if os.path.splitext(files)[1] == '.mp4':
 			File_Name.append(files)
 	return File_Name
-
-
-import os
 
 
 def file_pic_name(file_dir):

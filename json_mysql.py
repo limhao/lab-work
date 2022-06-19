@@ -26,6 +26,7 @@ if __name__ == '__main__':
 			with open(textRoot, encoding='utf-8') as f:
 				t = json.load(f)
 				# 这里的key 需要加'' 否则 回报keyerror 错误
+				# 是'' 不是 ""
 				sql = """INSERT INTO myData(className ,main ,topic, content, startTime, endTime) VALUES ('{}','{}','{}', '{}', '{}','{}');""".format(t['className'], t['main'], t['topic'], t['content'], t['startTime'], t['endTime'])
 				# sql语句写入
 				print(sql)
