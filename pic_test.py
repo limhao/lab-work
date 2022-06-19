@@ -13,4 +13,3 @@ for filepath, dirnames, filenames in os.walk(os.path.join(pic_root, className)):
 	main = os.path.split(filepath)[-1]
 	for filename in filenames:
 		print(os.path.join(main, filename))
-		print(filename)
