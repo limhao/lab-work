@@ -16,6 +16,7 @@ from urllib.parse import urlencode
 # 防止https证书校验不正确
 import ssl
 import os
+import operator
 
 ssl._create_default_https_context = ssl._create_unverified_context
 
@@ -34,9 +35,9 @@ TOKEN_URL = 'https://aip.baidubce.com/oauth/2.0/token'
 # 定义垃圾词
 rubbish_word = ['己utho', 'bnmou', 'pyho如', '知中国大学MOOC', '中国大学MOOC', 'python', '2', 'bdryou', 'pythoni', 'baryoul',
                 'barpou', 'bdrpou', "python'", '和中国大学MOOC', 'pythom', 'pyhQ心', 'pyho或', 'bAmou', 'pyhQ吸', 'bao则',
-                'bpo网', 'bpo画', 'pythor如', '-Python', 'bAgou',  'bAgpou','bAmpou','bampou','bAmpou','pyhg吸']
-
-
+                'bpo网', 'bpo画', 'pythor如', '-Python', 'bAgou',  'bAgpou', 'bAmpou','bampou','bAmpou','pyhg吸', 'pyhQ或']
+# 试下 正则的匹配方式
+rubbish_words = ['bpo', '中国大', '已', '己', 'ou', 'po画', 'po网', 'bo画']
 def fetch_token():
 	params = {'grant_type': 'client_credentials',
 	          'client_id': API_KEY,
@@ -145,7 +146,7 @@ def rubbish_word_fun(result_json, rubbish_word):
 		return result
 
 def topic_rechange(topic):
-	illagle = ['.', ',', '"']
+	illagle = ['.', ',', '"', '…', '?', '/', '\\', '(', ')', '<', '>', ':', '*']
 	for word in illagle:
 		topic = topic.replace(word, '')
 	return topic
@@ -193,6 +194,13 @@ if __name__ == '__main__':
 		pic_file_name = file_pic_name(now_address)
 		sort_pic_file = sort_string_list(pic_file_name)
 		text_address = os.path.join(classWordRoot, main)
+		# 写个判断 是不是已经提取了
+		'''
+		1. 对比提取的文件夹是不是存在
+		'''
+		if main in os.listdir(classWordRoot):
+			print("文字已经提取 跳过")
+			continue
 		try:
 			os.mkdir(text_address)
 		except Exception as e:
@@ -201,10 +209,6 @@ if __name__ == '__main__':
 		text = ""
 		topic = ""
 		content = ""
-		# 写个判断 是不是已经提取了
-		'''
-		1. 对比提取的文件夹是不是存在
-		'''
 
 		for i in range(len(sort_pic_file)):
 			# 前后顺序很重要
@@ -248,13 +252,14 @@ if __name__ == '__main__':
 					for k in range(exam):
 						# print(i)
 						try:
-							if result_json['words_result'][k]['words'] in rubbish_word:
-								del result_json['words_result'][k]
-								restart = True
-							elif len(result_json['words_result'][k]['words']) <= 3:
-								del result_json['words_result'][k]
-								restart = True
-							elif k == (exam - 1):
+							# if result_json['words_result'][k]['words'] in rubbish_word:
+							# 	del result_json['words_result'][k]
+							# 	restart = True
+							for rubbish_word_item in rubbish_words:
+								if operator.contains(result_json['words_result'][k]['words'], rubbish_word_item):
+									del result_json['words_result'][k]
+									restart = True
+							if k == (exam - 1):
 								restart = False
 						except:
 							pass
@@ -299,7 +304,6 @@ if __name__ == '__main__':
 				new_dict['content'] = text
 				new_dict['startTime'] = startTime
 				new_dict['endTime'] = name[:-4]
-				topic = topic.replace(':', '')
 				json_dit = topic + '.json'
 				json_add = os.path.join(text_address, json_dit)
 				print(new_dict)
@@ -333,6 +337,8 @@ if __name__ == '__main__':
 			# new_dict['topic'] = result_json['words_result'][0]['words']
 			# print(len(result_json['words_result']))
 			topic = result_json['words_result'][0]['words']
+			# topic 处理
+			topic = topic_rechange(topic)
 			topic_context = []
 			for content in range(1, len(result_json['words_result'])):
 				topic_context.append(result_json['words_result'][content]['words'])
