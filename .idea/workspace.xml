@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4f300e0-99a8-4978-854e-1da3cd3a22ba" name="Changes" comment="大进步">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pic_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/pic_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pic_word.py" beforeDir="false" afterPath="$PROJECT_DIR$/pic_word.py" afterDir="false" />
-    </list>
+    <list default="true" id="f4f300e0-99a8-4978-854e-1da3cd3a22ba" name="Changes" comment="大困扰" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -231,7 +227,7 @@
       <workItem from="1655111236253" duration="10657000" />
       <workItem from="1655172800213" duration="8110000" />
       <workItem from="1655608546846" duration="1035000" />
-      <workItem from="1655622233178" duration="17309000" />
+      <workItem from="1655622233178" duration="17858000" />
     </task>
     <task id="LOCAL-00001" summary="提交">
       <created>1652844967222</created>
@@ -268,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655629070128</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="大困扰">
+      <created>1655645380853</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1655645380853</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,7 +293,8 @@
     <MESSAGE value="修改了 pic_word 代码 更改逻辑" />
     <MESSAGE value="测试 测试" />
     <MESSAGE value="大进步" />
-    <option name="LAST_COMMIT_MESSAGE" value="大进步" />
+    <MESSAGE value="大困扰" />
+    <option name="LAST_COMMIT_MESSAGE" value="大困扰" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
