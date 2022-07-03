@@ -1,22 +1,16 @@
 import os
 from collections import Counter
 
-dir_video_src = os.path.join(os.getcwd(), 'video')
+video_src = os.path.join(os.getcwd(), 'video')
+video_des = os.path.join(os.getcwd(), 'pic')
 
-# 这个代码是获得文件夹内的文件
-# def file_name(file_dir):
-# 	File_Name = []
-# 	for files in os.listdir(file_dir):
-# 		if os.path.splitext(files)[1] == '.mp4':
-# 			File_Name.append(files)
-# 	return File_Name
-#
-#
-# txt_file_name = file_name(dir_video_src)
-# print(txt_file_name)
-
+# attention 你需要填入的信息
+# 课程名称
+dir_video_src = os.path.join(video_src, 'python语言程序设计')
 # os.getcwd() 获得当前地址
-
+# 存入的图片的地址
+dir_video_des = os.path.join(video_des, 'python语言程序设计')
+os.mkdir(dir_video_des)
 '''
 描述： 下面这一个代码 是获得目标文件夹内的所有视频文件 并且存成list 存储
 
@@ -27,8 +21,6 @@ import warnings
 import shutil
 
 warnings.filterwarnings("ignore", category=DeprecationWarning)
-
-dir_video_des = os.path.join(os.getcwd(), 'pic')
 
 
 def extract_video(filename):
@@ -60,7 +52,6 @@ for filepath, dirnames, filenames in os.walk(dir_video_src):
 			# 存图片的地址
 			file_dir_desc = os.path.join(dir_video_des, filename)
 			if not os.path.exists(file_dir_desc):
-
 				os.mkdir(file_dir_desc)
 				print("创建文件夹 ", file_dir_desc)
 			else:

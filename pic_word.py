@@ -38,6 +38,8 @@ rubbish_word = ['己utho', 'bnmou', 'pyho如', '知中国大学MOOC', '中国大
                 'bpo网', 'bpo画', 'pythor如', '-Python', 'bAgou',  'bAgpou', 'bAmpou','bampou','bAmpou','pyhg吸', 'pyhQ或']
 # 试下 正则的匹配方式
 rubbish_words = ['bpo', '中国大', '已', '己', 'ou', 'po画', 'po网', 'bo画']
+# 填入 课程名称
+className = "python语言程序设计"
 def fetch_token():
 	params = {'grant_type': 'client_credentials',
 	          'client_id': API_KEY,
@@ -151,7 +153,7 @@ def topic_rechange(topic):
 		topic = topic.replace(word, '')
 	return topic
 
-className = "python语言程序设计"
+
 pic_root = os.path.join(os.getcwd(), 'pic')
 word_root = os.path.join(os.getcwd(), 'text')
 classPicRoot = os.path.join(pic_root, className)

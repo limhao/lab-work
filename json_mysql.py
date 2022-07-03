@@ -24,15 +24,19 @@ if __name__ == '__main__':
 		for file_name in file_names:
 			textRoot = os.path.join(dir_path, file_name)
 			with open(textRoot, encoding='utf-8') as f:
-				t = json.load(f)
-				# 这里的key 需要加'' 否则 回报keyerror 错误
-				# 是'' 不是 ""
-				sql = """INSERT INTO myData(className ,main ,topic, content, startTime, endTime) VALUES ('{}','{}','{}', '{}', '{}','{}');""".format(t['className'], t['main'], t['topic'], t['content'], t['startTime'], t['endTime'])
-				# sql语句写入
-				print(sql)
-				with open(sqlRoot, 'a', encoding='utf-8') as t:
-					t.write(sql)
-					t.write('\n')
+				try:
+					t = json.load(f)
+					# 这里的key 需要加'' 否则 回报keyerror 错误
+					# 是'' 不是 ""
+					sql = """INSERT INTO myData(className ,main ,topic, content, startTime, endTime) VALUES ('{}','{}','{}', '{}', '{}','{}');""".format(t['className'], t['main'], t['topic'], t['content'], t['startTime'], t['endTime'])
+					# sql语句写入
+					print(sql)
+
+					with open(sqlRoot, 'a', encoding='utf-8') as t:
+						t.write(sql)
+						t.write('\n')
+				except:
+					pass
 
 
 
