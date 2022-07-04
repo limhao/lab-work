@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4f300e0-99a8-4978-854e-1da3cd3a22ba" name="Changes" comment="大困扰">
-      <change afterPath="$PROJECT_DIR$/knowledge.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/qbs_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/json_mysql.py" beforeDir="false" afterPath="$PROJECT_DIR$/json_mysql.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knowledgeSearch.sql" beforeDir="false" afterPath="$PROJECT_DIR$/knowledgeSearch.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mtianyanSearch.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pic_word.py" beforeDir="false" afterPath="$PROJECT_DIR$/pic_word.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/video_pic.py" beforeDir="false" afterPath="$PROJECT_DIR$/video_pic.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +243,7 @@
       <workItem from="1656338412319" duration="638000" />
       <workItem from="1656590126404" duration="4697000" />
       <workItem from="1656765710984" duration="6661000" />
-      <workItem from="1656812156405" duration="2784000" />
+      <workItem from="1656812156405" duration="3383000" />
     </task>
     <task id="LOCAL-00001" summary="提交">
       <created>1652844967222</created>
