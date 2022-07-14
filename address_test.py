@@ -27,7 +27,7 @@ def file_pic_name(file_dir):
 video_file_name = file_video_name(pic_root)
 now_address = os.path.join(pic_root, '[3.2.6]--单元小结.mp4')
 pic_file_name = file_pic_name(now_address)
-# 成了
+# 成了没
 print(pic_file_name)
 # print(video_file_name)
 rubbish_word = ['中国大学MOOC', 'python', '2']
